@@ -4,13 +4,14 @@
   # Vite
 
 # NodeJS v16
-## component breakdown for Modularity and re-usability
+
+## Modularity and re-usability
+
 # services:
-  # created for API calls.
+  created for API calls.
 # models:
-  # defined interface,
+  defined interface,
 # hooks:
-  # created for fetch API calls.
-  
+  created for fetch API calls.
 # .env
-  # VITE_API_BASE_URL=https://fakestoreapi.com/
+  VITE_API_BASE_URL=https://fakestoreapi.com/
