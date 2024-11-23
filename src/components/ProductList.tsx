@@ -9,7 +9,7 @@ import ShimmerCard from './shared/ShimmerCard';
 import useGetProducts from '../hooks/useGetProducts';
 
 const Card = React.lazy(() => import('./shared/Card'));
-const Loader  = React.lazy(() => import('./shared/Loader'));
+// const Loader  = React.lazy(() => import('./shared/Loader'));
 const ProductModal = React.lazy(() => import('./ProductModal'));
 
 

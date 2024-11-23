@@ -16,18 +16,18 @@ export const sortProducts = (products: iProduct[], sortBy: string) => {
 };
 
 
-export const getProducstByCategory = (products: iProduct[], category:string): iProduct[] | null => {
+export const getProducstByCategory = (products: any, category:string) => {
   
   if (!products) return null;
  
   return products.filter((product: iProduct) => {
-    const matchesCategory = category ? product.category.toLocaleLowerCase().includes(category.toLowerCase()) : true;
+    const productCategory = category ? product.category.toLocaleLowerCase().includes(category.toLowerCase()) : true;
    
-    return matchesCategory; // && matchesRating && matchesPrice;
+    return productCategory;
   });
 };
 
-export const filterProductsByPriceRange = (products: iProduct[], priceRange: [number, number]): iProduct[] | null => {
+export const filterProductsByPriceRange = (products: any, priceRange: any)=> {
   if (!products || products.length === 0) return null;
 
   return products.filter((product: iProduct) => {
@@ -37,12 +37,12 @@ export const filterProductsByPriceRange = (products: iProduct[], priceRange: [nu
 };
 
 
-export const  filterProductsByRating = (products: iProduct[], rating: number): iProduct[] | null => {
+export const  filterProductsByRating = (products: any, rating: any) => {
   if (!products || products.length === 0) return null;
 
   return products.filter((product: iProduct) => {
     const productRating = product.rating?.rate || 0; // Default to 0 if no rating is available
-    return productRating >= rating; // Keep products with a rating >= the filter
+    return productRating >= rating; // Keep products with a rating >= the filter selected by user
   });
 };
 
